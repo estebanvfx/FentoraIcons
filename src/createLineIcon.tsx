@@ -2,16 +2,13 @@ import React from 'react';
 import type { IconNode, IconProps } from './types';
 
 const SVG_ATTR_MAP: Record<string, string> = {
-  'width': 'strokeWidth',
-  'linecap': 'strokeLinecap',
-  'linejoin': 'strokeLinejoin',
   'stroke-width': 'strokeWidth',
   'stroke-linecap': 'strokeLinecap',
   'stroke-linejoin': 'strokeLinejoin',
 };
 
 // Attrs inherited from the parent SVG — skip them on child elements
-const INHERITED = new Set(['stroke', 'strokeWidth', 'width', 'stroke-width', 'strokeLinecap', 'linecap', 'stroke-linecap', 'strokeLinejoin', 'linejoin', 'stroke-linejoin']);
+const INHERITED = new Set(['stroke', 'strokeWidth', 'stroke-width', 'strokeLinecap', 'strokeLinejoin', 'stroke-linecap', 'stroke-linejoin']);
 
 function mapAttrs(attrs: Record<string, string>): Record<string, string> {
   const result: Record<string, string> = {};

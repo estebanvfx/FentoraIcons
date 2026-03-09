@@ -52,11 +52,12 @@ filesToProcess.forEach((svgFile, index) => {
     const svgContent = fs.readFileSync(svgPath, 'utf8');
     
     // Simple SVG parsing - extract path data
-    const pathMatches = svgContent.match(/<path[^>]*>/g) || [];
-    const circleMatches = svgContent.match(/<circle[^>]*>/g) || [];
-    const rectMatches = svgContent.match(/<rect[^>]*>/g) || [];
-    const lineMatches = svgContent.match(/<line[^>]*>/g) || [];
-    const polyMatches = svgContent.match(/<poly(line|gon)[^>]*>/g) || [];
+    const pathMatches = svgContent.match(/<path[^>]*\/?>/gs) || [];
+    const circleMatches = svgContent.match(/<circle[^>]*\/?>/gs) || [];
+    const rectMatches = svgContent.match(/<rect[^>]*\/?>/gs) || [];
+    const lineMatches = svgContent.match(/<line[^>]*\/?>/gs) || [];
+    const polyMatches = svgContent.match(/<poly(line|gon)[^>]*\/?>/gs) || [];
+    const ellipseMatches = svgContent.match(/<ellipse[^>]*\/?>/gs) || [];
     
     // Create icon node array
     const iconNode = [];
@@ -111,6 +112,11 @@ filesToProcess.forEach((svgFile, index) => {
     polyMatches.forEach(tag => {
       const tagName = tag.startsWith('<polygon') ? 'polygon' : 'polyline';
       iconNode.push([tagName, parseAttrs(tag)]);
+    });
+
+    // Process ellipses
+    ellipseMatches.forEach(tag => {
+      iconNode.push(['ellipse', parseAttrs(tag)]);
     });
 
     // Create icon component
