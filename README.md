@@ -1,21 +1,21 @@
-# @line-icons/react
+# @fentora-icons/react
 
-Line Icons library for React applications. 2,480+ premium line icons built with modern architecture.
+Fentora Icons library for React applications. 2,749+ premium line icons built with modern architecture.
 
 ## 📦 Installation
 
 ```bash
-npm install @line-icons/react
+npm install @fentora-icons/react
 # or
-pnpm add @line-icons/react
+pnpm add @fentora-icons/react
 # or
-yarn add @line-icons/react
+yarn add @fentora-icons/react
 ```
 
 ## 🚀 Quick Start
 
 ```jsx
-import { HomeIcon, UserIcon, SettingsIcon } from '@line-icons/react';
+import { HomeIcon, UserIcon, SettingsIcon } from '@fentora-icons/react';
 
 function App() {
   return (
@@ -57,10 +57,10 @@ The library is optimized for tree-shaking. Only import what you use:
 
 ```jsx
 // ✅ Good - only imports what's needed
-import { HomeIcon } from '@line-icons/react';
+import { HomeIcon } from '@fentora-icons/react';
 
 // ❌ Avoid - imports everything
-import * as Icons from '@line-icons/react';
+import * as Icons from '@fentora-icons/react';
 ```
 
 ## 🔧 Advanced Usage
@@ -82,7 +82,7 @@ import * as Icons from '@line-icons/react';
 
 ### Dynamic Icon Loading
 ```jsx
-import { createLineIcon } from '@line-icons/react';
+import { createLineIcon } from '@fentora-icons/react';
 
 // Create custom icon from SVG data
 const CustomIcon = createLineIcon('CustomIcon', [
@@ -98,7 +98,7 @@ function App() {
 
 ## 📊 Available Icons
 
-The library includes 2,480+ line icons covering:
+The library includes 2,749+ line icons covering:
 
 - **Interface** (buttons, menus, navigation)
 - **Essential** (home, user, settings, search)
@@ -136,8 +136,8 @@ MIT © Esteban Vfx
 
 - [Monorepo](../../README.md)
 - [Icons Directory](../../icons/)
-- [GitHub Repository](https://github.com/estebanvfx/line-icons)
+- [GitHub Repository](https://github.com/estebanvfx/FentoraIcons)
 
 ---
 
-*Part of the Line Icons monorepo - Modern icon library architecture*
+*Part of the Fentora Icons monorepo - Modern icon library architecture*
