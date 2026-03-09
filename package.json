@@ -1,16 +1,16 @@
 {
-  "name": "@line-icons/react",
+  "name": "@fentora-icons/react",
   "version": "0.1.0",
-  "description": "Line Icons library for React applications",
+  "description": "Fentora Icons library for React applications",
   "license": "MIT",
-  "homepage": "https://github.com/estebanvfx/line-icons",
+  "homepage": "https://github.com/estebanvfx/FentoraIcons",
   "repository": {
     "type": "git",
-    "url": "https://github.com/estebanvfx/line-icons.git",
-    "directory": "packages/line-icons-react"
+    "url": "https://github.com/estebanvfx/FentoraIcons.git",
+    "directory": "packages/fentora-icons-react"
   },
   "keywords": [
-    "line-icons",
+    "fentora-icons",
     "icons",
     "react",
     "svg",

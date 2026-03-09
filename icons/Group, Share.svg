@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 11.9999V8.43188L14 9.99988L12 8.43188L10 9.99988" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 20.994H18.444C17.892 20.994 17.444 20.546 17.444 19.994V18.438C17.444 17.886 17.892 17.438 18.444 17.438H20C20.552 17.438 21 17.886 21 18.438V19.994C21 20.546 20.552 20.994 20 20.994Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.44 19.22H6.56" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.556 20.994H4C3.448 20.994 3 20.546 3 19.994V18.438C3 17.886 3.448 17.438 4 17.438H5.556C6.108 17.438 6.556 17.886 6.556 18.438V19.994C6.556 20.546 6.108 20.994 5.556 20.994Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 6.5499H18.444C17.892 6.5499 17.444 6.1019 17.444 5.5499V3.9939C17.444 3.4419 17.892 2.9939 18.444 2.9939H20C20.552 2.9939 21 3.4419 21 3.9939V5.5499C21 6.1019 20.552 6.5499 20 6.5499Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.44 4.76978H6.56" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.556 6.5499H4C3.448 6.5499 3 6.1019 3 5.5499V3.9939C3 3.4419 3.448 2.9939 4 2.9939H5.556C6.108 2.9939 6.556 3.4419 6.556 3.9939V5.5499C6.556 6.1019 6.108 6.5499 5.556 6.5499Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.78 6.5498V17.4398" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.22 6.5498V17.4398" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 13V14C15 14.552 14.552 15 14 15H10C9.448 15 9 14.552 9 14V13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

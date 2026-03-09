@@ -5,7 +5,7 @@ const path = require('path');
 
 console.log('🚀 Generating Line Icons React components (simple version)...\n');
 
-const ICONS_DIR = path.join(__dirname, '../../../icons');
+const ICONS_DIR = path.join(__dirname, '../icons');
 const OUTPUT_DIR = path.join(__dirname, '../src/icons');
 const ALIASES_DIR = path.join(__dirname, '../src/aliases');
 const ICONS_INDEX = path.join(__dirname, '../src/icons/index.ts');
@@ -25,6 +25,7 @@ console.log(`📊 Found ${svgFiles.length} SVG files\n`);
 
 const iconExports = [];
 const aliasExports = [];
+const seenComponentNames = new Set();
 
 // Process each SVG file (ALL icons)
 const filesToProcess = svgFiles; // Process ALL icons
@@ -122,15 +123,17 @@ const ${componentName} = createLineIcon('${componentName}', iconNode);
 
 export default ${componentName};`;
     
-    // Write component file
+    // Write component file (skip if name already used)
+    if (seenComponentNames.has(componentName)) {
+      return;
+    }
+    seenComponentNames.add(componentName);
+
     const outputPath = path.join(OUTPUT_DIR, `${componentName}.tsx`);
     fs.writeFileSync(outputPath, componentContent);
-    
+
     // Store for index file
     iconExports.push(`export { default as ${componentName} } from './${componentName}';`);
-    
-    // Store export for icons index
-    // (aliases are generated after all icons are processed, without duplicates)
     
     // Progress indicator
     if ((index + 1) % 10 === 0) {
@@ -162,7 +165,7 @@ for (const exp of iconExports) {
   if (alias && !seenAliases.has(alias)) {
     seenAliases.add(alias);
     // Path from src/aliases/ to src/icons/
-    uniqueAliases.push(`export { ${componentName} as ${alias} } from '../icons/${fileName}';`);
+    uniqueAliases.push(`export { default as ${alias} } from '../icons/${fileName}';`);
   }
 }
 
