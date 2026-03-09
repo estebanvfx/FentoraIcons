@@ -1,0 +1,55 @@
+{
+  "name": "@line-icons/react",
+  "version": "0.1.0",
+  "description": "Line Icons library for React applications",
+  "license": "MIT",
+  "homepage": "https://github.com/estebanvfx/line-icons",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/estebanvfx/line-icons.git",
+    "directory": "packages/line-icons-react"
+  },
+  "keywords": [
+    "line-icons",
+    "icons",
+    "react",
+    "svg",
+    "ui",
+    "components"
+  ],
+  "author": "Esteban Vfx",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "pnpm clean && pnpm build:icons && pnpm build:bundles",
+    "build:icons": "node scripts/generate-icons-simple.js",
+    "build:bundles": "rollup -c rollup.config.js",
+    "clean": "rm -rf dist && rm -rf src/icons && rm -rf src/aliases",
+    "dev": "echo 'Run: pnpm build:icons && pnpm build:bundles'",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.3.28",
+    "react": "^18.3.1",
+    "rollup": "^4.59.0",
+    "rollup-plugin-dts": "^6.3.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
